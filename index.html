@@ -1,0 +1,944 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#075c32">
+<title>HALAL PESA | Affordable Loans in Kenya</title>
+<meta name="description" content="HALAL PESA - Online loan applications for personal, business, school fees and farming needs in Kenya.">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#222;background:#f7faf8}
+a{text-decoration:none}
+.container{width:92%;max-width:1150px;margin:auto}
+
+header{background:#075c32;color:#fff;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{color:#fff;font-size:25px;font-weight:800;white-space:nowrap}
+.logo span{color:#f4c542}
+.powered{display:block;font-size:9px;color:#dfeee5}
+nav{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+nav a{color:#fff;font-size:14px;font-weight:600}
+nav a:hover{color:#f4c542}
+
+.hero{background:linear-gradient(120deg,#044324,#08713d);color:#fff;padding:75px 0 65px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:center}
+.hero h1{font-size:clamp(36px,6vw,62px);line-height:1.08;margin-bottom:20px}
+.hero h1 span{color:#f4c542}
+.hero p{font-size:18px;max-width:680px;margin-bottom:28px;color:#eef8f2}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 21px;border-radius:7px;font-weight:700;border:none;cursor:pointer;font-size:15px}
+.btn-primary{background:#f4c542;color:#183000}
+.btn-secondary{background:#fff;color:#075c32}
+.btn-whatsapp{background:#25d366;color:#fff}
+
+.hero-card{background:#fff;color:#222;border-radius:14px;padding:28px;box-shadow:0 15px 40px rgba(0,0,0,.18)}
+.hero-card h2{color:#075c32;margin-bottom:18px;font-size:25px}
+.hero-card .amount{font-size:30px;font-weight:800;color:#075c32}
+.hero-card small{color:#666}
+.hero-list{list-style:none;margin-top:20px}
+.hero-list li{padding:9px 0;border-bottom:1px solid #eee}
+
+section{padding:70px 0}
+.section-title{text-align:center;color:#075c32;font-size:34px;margin-bottom:12px}
+.section-subtitle{text-align:center;max-width:760px;margin:0 auto 40px;color:#666}
+
+.highlights{background:#fff;padding:25px 0}
+.highlight-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.highlight{text-align:center;padding:15px}
+.highlight strong{display:block;color:#075c32;font-size:24px}
+.highlight span{font-size:14px;color:#666}
+
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#fff;padding:28px 22px;border-radius:12px;border:1px solid #e4ebe7;box-shadow:0 5px 18px rgba(0,0,0,.05)}
+.card-icon{font-size:35px;margin-bottom:12px}
+.card h3{color:#075c32;margin-bottom:9px}
+.card p{color:#666;font-size:14px}
+
+.calculator-section,.application-section{background:#edf5ef}
+.calculator{max-width:850px;margin:auto;background:#fff;border-radius:15px;padding:32px;box-shadow:0 8px 30px rgba(0,0,0,.08)}
+.calculator label{display:block;font-weight:700;margin-bottom:8px}
+.calculator input{width:100%;padding:13px;border:1px solid #ccd8d0;border-radius:7px;font-size:16px;margin-bottom:20px}
+.range-value{font-weight:800;color:#075c32;margin-bottom:8px;font-size:20px}
+input[type=range]{accent-color:#075c32}
+.calc-results{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:15px}
+.result-box{background:#f4f8f5;border-radius:10px;padding:18px;text-align:center}
+.result-box span{display:block;font-size:13px;color:#666}
+.result-box strong{color:#075c32;font-size:21px}
+.calculator-note{font-size:13px;color:#666;margin-top:20px}
+.fee-examples{margin-top:28px}
+.fee-examples h3{color:#075c32;margin-bottom:12px}
+.fee-table{width:100%;border-collapse:collapse}
+.fee-table th,.fee-table td{padding:12px;border:1px solid #dce6df;text-align:left}
+.fee-table th{background:#075c32;color:#fff}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step{text-align:center;background:#fff;padding:25px 18px;border-radius:12px;border:1px solid #e2eae5}
+.step-number{width:45px;height:45px;border-radius:50%;background:#075c32;color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 15px;font-weight:800}
+.step h3{color:#075c32;margin-bottom:8px}
+.step p{font-size:14px;color:#666}
+
+.application-wrapper{max-width:950px;margin:auto;background:#fff;padding:32px;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.07)}
+.form-note{background:#edf5ef;border-left:4px solid #075c32;padding:14px;margin-bottom:25px;font-size:14px}
+form h3{color:#075c32;margin:28px 0 15px;padding-bottom:7px;border-bottom:1px solid #e0e8e2}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}
+.form-group{margin-bottom:5px}
+.form-group.full{grid-column:1/-1}
+.form-group label{display:block;font-weight:600;margin-bottom:7px;font-size:14px}
+.required{color:#c0392b}
+input,select,textarea{width:100%;padding:12px;border:1px solid #cbd8cf;border-radius:7px;font-family:inherit;font-size:15px;background:#fff}
+textarea{min-height:100px;resize:vertical}
+.checkbox-label{display:flex;align-items:flex-start;gap:10px;font-size:14px;margin-bottom:12px}
+.checkbox-label input{width:auto;margin-top:5px}
+.submit-area{margin-top:25px;text-align:center}
+.submit-btn{background:#075c32;color:#fff;padding:14px 30px;border:none;border-radius:7px;font-size:16px;font-weight:800;cursor:pointer}
+.submit-btn:disabled{opacity:.65;cursor:not-allowed}
+
+.notice{background:#fff7df;border:1px solid #efd98a;border-radius:10px;padding:15px;margin:18px 0;font-size:14px;color:#5d4b13}
+.fee-notice{background:#fff8e5;border:2px solid #e8c85c;border-radius:12px;padding:20px;margin:22px 0}
+.fee-notice h3{color:#075c32;margin:0 0 10px;border:0}
+.fee-amount{font-size:30px;font-weight:800;color:#075c32}
+.status-box{background:#edf5ef;border:1px solid #b8d6c1;padding:20px;border-radius:10px;margin:20px 0;text-align:center}
+.status-box h2{color:#075c32}
+.status-pending{display:inline-block;background:#fff1c9;color:#755400;padding:7px 14px;border-radius:20px;font-weight:700;margin:10px 0}
+
+.success-message{text-align:center;padding:35px 20px;background:#edf5ef;border-radius:12px}
+.success-message h2{color:#075c32;margin-bottom:15px}
+.success-home{display:inline-block;background:#075c32;color:#fff;padding:13px 25px;border-radius:7px;font-weight:700}
+
+.faq{max-width:900px;margin:auto}
+details{background:#fff;margin-bottom:12px;border:1px solid #dfe8e2;border-radius:9px;padding:17px 20px}
+summary{cursor:pointer;color:#075c32;font-weight:700}
+details p{padding-top:12px;color:#555;font-size:14px}
+
+.contact-section{background:#075c32;color:#fff}
+.contact-section .section-title{color:#fff}
+.contact-section .section-subtitle{color:#e0eee5}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.contact-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:25px;text-align:center}
+.contact-card h3{margin-bottom:8px}
+.contact-card p{color:#e3f0e8}
+.contact-card a{color:#f4c542;font-weight:700}
+
+.legal{background:#fff}
+.legal-content{max-width:900px;margin:auto}
+.legal-content h3{color:#075c32;margin:25px 0 8px}
+.legal-content p,.legal-content li{color:#555;font-size:14px}
+
+footer{background:#063d23;color:#dce9e1;padding:30px 0;text-align:center}
+footer p{font-size:13px;margin:5px 0}
+footer a{color:#f4c542}
+
+.whatsapp{position:fixed;right:18px;bottom:18px;z-index:999;background:#25d366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:27px;box-shadow:0 5px 18px rgba(0,0,0,.25)}
+
+@media(max-width:900px){
+.hero-grid{grid-template-columns:1fr}
+.cards{grid-template-columns:repeat(2,1fr)}
+.highlight-grid{grid-template-columns:repeat(2,1fr)}
+.steps{grid-template-columns:repeat(2,1fr)}
+.contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+.nav{padding:12px 0;align-items:flex-start;flex-direction:column}
+nav{gap:9px 13px}
+nav a{font-size:12px}
+.hero{padding:55px 0}
+.hero h1{font-size:40px}
+section{padding:50px 0}
+.section-title{font-size:28px}
+.cards,.highlight-grid,.steps,.form-grid,.calc-results{grid-template-columns:1fr}
+.application-wrapper,.calculator{padding:22px 16px}
+.form-group.full{grid-column:auto}
+.fee-table th,.fee-table td{padding:8px;font-size:12px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+<a href="#home" class="logo">HALAL <span>PESA</span>
+<small class="powered">POWERED BY M-PESA</small></a>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#loans">Loans</a>
+<a href="#calculator">Calculator</a>
+<a href="#how-it-works">How It Works</a>
+<a href="#apply">Apply</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div>
+<h1>Simple & Accessible <span>Loans in Kenya</span></h1>
+<p>HALAL PESA provides online loan applications for personal, business, school fees and farming needs.</p>
+
+<div class="hero-buttons">
+<a href="#apply" class="btn btn-primary">Apply for a Loan</a>
+<a href="#calculator" class="btn btn-secondary">Calculate Interest</a>
+<a href="https://wa.me/254182897983" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">WhatsApp Us</a>
+</div>
+</div>
+
+<div class="hero-card">
+<h2>Loan Information</h2>
+<div class="amount">KSh 5,000 – 250,000</div>
+<small>Displayed loan application range</small>
+<ul class="hero-list">
+<li><strong>One-time Interest:</strong> 7%</li>
+<li><strong>Commitment Fee:</strong> KSh 99</li>
+<li><strong>Repayment Period:</strong> 3 months</li>
+<li><strong>Loan Categories:</strong> 4</li>
+<li><strong>Application:</strong> Online</li>
+</ul>
+<a href="#apply" class="btn btn-primary" style="margin-top:18px;width:100%;text-align:center">Start Application</a>
+</div>
+</div>
+</section>
+
+<!-- HIGHLIGHTS -->
+
+<section class="highlights">
+<div class="container highlight-grid">
+<div class="highlight"><strong>KSh 5,000</strong><span>Minimum Loan</span></div>
+<div class="highlight"><strong>KSh 250,000</strong><span>Maximum Loan</span></div>
+<div class="highlight"><strong>7%</strong><span>One-time Interest</span></div>
+<div class="highlight"><strong>KSh 99</strong><span>Commitment Fee</span></div>
+</div>
+</section>
+
+<!-- LOAN CATEGORIES -->
+
+<section id="loans">
+<div class="container">
+<h2 class="section-title">Our Loan Categories</h2>
+<p class="section-subtitle">Choose the type of financing that matches your intended use.</p>
+
+<div class="cards">
+<div class="card">
+<div class="card-icon">👤</div>
+<h3>Personal Loans</h3>
+<p>Financing intended for personal needs and planned expenses.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">💼</div>
+<h3>Business Loans</h3>
+<p>Financing for eligible business activities, working capital, stock and expansion.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🎓</div>
+<h3>School Fees Loans</h3>
+<p>Financing intended to assist with school and education-related expenses.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🌾</div>
+<h3>Farmer Loans</h3>
+<p>Financing intended for eligible agricultural and farming activities.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CALCULATOR -->
+
+<section class="calculator-section" id="calculator">
+<div class="container">
+<h2 class="section-title">Loan Calculator</h2>
+<p class="section-subtitle">Calculate your 7% one-time loan interest and estimated repayment.</p>
+
+<div class="calculator">
+<label for="loanAmount">Select Requested Loan Amount</label>
+<div class="range-value" id="amountDisplay">KSh 5,000</div>
+
+<input type="range" id="loanAmount" min="5000" max="250000" step="1000" value="5000">
+
+<label for="loanAmountNumber">Enter Amount Directly</label>
+<input type="number" id="loanAmountNumber" min="5000" max="250000" step="1000" value="5000">
+
+<div class="calc-results">
+<div class="result-box">
+<span>Requested Loan</span>
+<strong id="requestedAmount">KSh 5,000</strong>
+</div>
+
+<div class="result-box">
+<span>7% One-time Interest</span>
+<strong id="interestAmount">KSh 350</strong>
+</div>
+
+<div class="result-box">
+<span>Total Repayment</span>
+<strong id="totalRepayment">KSh 5,350</strong>
+</div>
+</div>
+
+<p class="calculator-note">
+The 7% interest is calculated once on the original requested loan amount. It is not charged monthly. The KSh 99 commitment fee is separate and is not included in this calculation.
+</p>
+
+<div class="fee-examples">
+<h3>Interest Examples</h3>
+
+<table class="fee-table">
+<thead>
+<tr>
+<th>Loan Amount</th>
+<th>7% Interest</th>
+<th>Total Repayment</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>KSh 5,000</td><td>KSh 350</td><td>KSh 5,350</td></tr>
+<tr><td>KSh 10,000</td><td>KSh 700</td><td>KSh 10,700</td></tr>
+<tr><td>KSh 50,000</td><td>KSh 3,500</td><td>KSh 53,500</td></tr>
+<tr><td>KSh 100,000</td><td>KSh 7,000</td><td>KSh 107,000</td></tr>
+<tr><td>KSh 250,000</td><td>KSh 17,500</td><td>KSh 267,500</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="notice">
+<strong>Important:</strong> These are estimates, not loan approval or a binding repayment offer. The final repayment schedule and all applicable charges must be confirmed in writing before accepting a loan.
+</div>
+</div>
+</div>
+</section>
+
+<!-- HOW IT WORKS -->
+
+<section id="how-it-works">
+<div class="container">
+<h2 class="section-title">How It Works</h2>
+<p class="section-subtitle">Understand the application and assessment process.</p>
+
+<div class="steps">
+<div class="step">
+<div class="step-number">1</div>
+<h3>Choose a Loan</h3>
+<p>Select the loan category that matches your intended purpose.</p>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<h3>Apply Online</h3>
+<p>Complete the application form with accurate information.</p>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<h3>Commitment Fee</h3>
+<p>Review the KSh 99 fee disclosure and payment instructions before making any payment.</p>
+</div>
+
+<div class="step">
+<div class="step-number">4</div>
+<h3>Application Review</h3>
+<p>After any required payment is verified, the application can proceed to assessment. Approval is not guaranteed.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- APPLICATION -->
+
+<section class="application-section" id="apply">
+<div class="container">
+<h2 class="section-title">Loan Application</h2>
+<p class="section-subtitle">Complete the application form below.</p>
+
+<div class="application-wrapper">
+
+<div class="form-note">
+<strong>Before applying:</strong> Submitting an application does not guarantee approval or loan disbursement. Please provide accurate information.
+</div>
+
+<div id="applicationFormArea">
+
+<form name="loan-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="loanApplicationForm">
+
+<input type="hidden" name="form-name" value="loan-application">
+
+<p style="display:none">
+<label>Don't fill this out if you're human:
+<input name="bot-field">
+</label>
+</p>
+
+<h3>1. Personal Information</h3>
+
+<div class="form-grid">
+
+<div class="form-group">
+<label>Full Name *</label>
+<input type="text" name="full-name" required autocomplete="name" placeholder="Enter your full name">
+</div>
+
+<div class="form-group">
+<label>Phone Number *</label>
+<input type="tel" name="phone-number" required autocomplete="tel" placeholder="07XXXXXXXX">
+</div>
+
+<div class="form-group">
+<label>Email Address *</label>
+<input type="email" name="email-address" required autocomplete="email" placeholder="Enter your email">
+</div>
+
+<div class="form-group">
+<label>National ID Number *</label>
+<input type="text" name="national-id-number" required placeholder="Enter your ID number">
+</div>
+
+<div class="form-group">
+<label>Date of Birth *</label>
+<input type="date" name="date-of-birth" required>
+</div>
+
+<div class="form-group">
+<label>County *</label>
+<input type="text" name="county" required placeholder="Enter your county">
+</div>
+
+<div class="form-group">
+<label>Town / Location *</label>
+<input type="text" name="town-location" required placeholder="Enter your town">
+</div>
+
+<div class="form-group">
+<label>Residential Address</label>
+<input type="text" name="residential-address" placeholder="Residential address">
+</div>
+
+</div>
+
+<h3>2. Employment & Income Information</h3>
+
+<div class="form-grid">
+
+<div class="form-group">
+<label>Employment Status *</label>
+<select name="employment-status" required>
+<option value="">Select status</option>
+<option>Employed</option>
+<option>Self-employed</option>
+<option>Business owner</option>
+<option>Farmer</option>
+<option>Casual worker</option>
+<option>Other</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Employer / Business Name</label>
+<input type="text" name="employer-business-name">
+</div>
+
+<div class="form-group">
+<label>Occupation / Business Activity *</label>
+<input type="text" name="occupation-business-activity" required>
+</div>
+
+<div class="form-group">
+<label>Approximate Monthly Income (KSh) *</label>
+<input type="number" name="monthly-income" min="0" required>
+</div>
+
+<div class="form-group">
+<label>Main Source of Income *</label>
+<select name="main-income-source" required>
+<option value="">Select source</option>
+<option>Salary</option>
+<option>Business</option>
+<option>Farming</option>
+<option>Self-employment</option>
+<option>Other</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Length of Current Income Source</label>
+<input type="text" name="income-source-duration" placeholder="e.g. 2 years">
+</div>
+
+</div>
+
+<h3>3. Loan Information</h3>
+
+<div class="form-grid">
+
+<div class="form-group">
+<label>Loan Type *</label>
+<select name="loan-type" required>
+<option value="">Select loan type</option>
+<option>Personal Loan</option>
+<option>Business Loan</option>
+<option>School Fees Loan</option>
+<option>Farmer Loan</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Requested Loan Amount (KSh) *</label>
+<input type="number" id="loanAmountForm" name="requested-loan-amount" min="5000" max="250000" step="1000" required placeholder="5000 - 250000">
+</div>
+
+<div class="form-group">
+<label>Purpose of Loan *</label>
+<select name="loan-purpose" required>
+<option value="">Select purpose</option>
+<option>Personal needs</option>
+<option>Business working capital</option>
+<option>Business expansion</option>
+<option>Stock purchase</option>
+<option>School fees</option>
+<option>Farming inputs</option>
+<option>Agricultural activity</option>
+<option>Other</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Repayment Period</label>
+<input type="text" name="repayment-period" value="3 months" readonly>
+</div>
+
+<div class="form-group">
+<label>Estimated 7% One-time Interest</label>
+<input type="text" id="interestFeeForm" name="estimated-interest" value="KSh 350" readonly>
+</div>
+
+<div class="form-group">
+<label>Estimated Total Repayment</label>
+<input type="text" id="totalRepaymentForm" name="estimated-total-repayment" value="KSh 5,350" readonly>
+</div>
+
+<div class="form-group full">
+<label>Additional Information</label>
+<textarea name="additional-loan-information" placeholder="Tell us anything relevant about your loan request."></textarea>
+</div>
+
+</div>
+
+<h3>4. Existing Loan Information</h3>
+
+<div class="form-grid">
+
+<div class="form-group">
+<label>Do You Currently Have an Existing Loan? *</label>
+<select name="existing-loan" required>
+<option value="">Select answer</option>
+<option>Yes</option>
+<option>No</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Existing Loan Provider</label>
+<input type="text" name="existing-loan-provider">
+</div>
+
+<div class="form-group">
+<label>Approximate Outstanding Balance (KSh)</label>
+<input type="number" name="existing-loan-balance" min="0">
+</div>
+
+<div class="form-group">
+<label>Current Monthly Loan Repayment (KSh)</label>
+<input type="number" name="current-monthly-repayment" min="0">
+</div>
+
+</div>
+
+<h3>5. Commitment Fee Disclosure</h3>
+
+<div class="fee-notice">
+<h3>Application Commitment Fee</h3>
+
+<div class="fee-amount">KSh 99</div>
+
+<p>
+A separate KSh 99 commitment fee is requested in connection with the application process.
+</p>
+
+<p style="margin-top:10px">
+This amount is separate from the 7% one-time loan interest and is not included in the loan repayment calculation.
+</p>
+
+<p style="margin-top:10px">
+Before making any payment, applicants must be given the verified payment recipient, payment instructions, the purpose of the fee and its refund conditions. Payment does not guarantee approval or disbursement.
+</p>
+
+<p style="margin-top:10px">
+<strong>Payment method:</strong> M-PESA payment instructions will be provided through the verified official contact channel.
+</p>
+</div>
+
+<h3>6. Consent & Declarations</h3>
+
+<label class="checkbox-label">
+<input type="checkbox" name="information-accuracy" value="confirmed" required>
+<span>I confirm that the information provided is accurate and complete to the best of my knowledge. *</span>
+</label>
+
+<label class="checkbox-label">
+<input type="checkbox" name="assessment-consent" value="consented" required>
+<span>I consent to the submitted information being reviewed for application assessment and processing. *</span>
+</label>
+
+<label class="checkbox-label">
+<input type="checkbox" name="communication-consent" value="consented" required>
+<span>I consent to being contacted about my application. *</span>
+</label>
+
+<label class="checkbox-label">
+<input type="checkbox" name="fee-disclosure-acknowledgement" value="acknowledged" required>
+<span>I have read the separate KSh 99 commitment-fee disclosure and understand that payment does not guarantee loan approval. *</span>
+</label>
+
+<label class="checkbox-label">
+<input type="checkbox" name="terms-acceptance" value="accepted" required>
+<span>I have read and understood the Terms & Privacy information below. *</span>
+</label>
+
+<div class="submit-area">
+
+<button type="submit" class="submit-btn" id="submitButton">
+Submit Loan Application
+</button>
+
+<p style="font-size:13px;color:#666;margin-top:12px">
+After successful submission, you will receive the commitment-fee information and application status.
+</p>
+
+<p style="margin-top:18px">Need assistance?</p>
+
+<a href="https://wa.me/254182897983" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="margin-top:8px">
+Contact HALAL PESA
+</a>
+
+</div>
+
+</form>
+</div>
+
+<!-- SUCCESS / PAYMENT STATUS -->
+
+<div id="successArea" style="display:none">
+
+<div class="success-message">
+<h2>Application Submitted Successfully!</h2>
+<p>Your online application has been received.</p>
+</div>
+
+<div class="status-box">
+<h2>Application Status</h2>
+<div class="status-pending">AWAITING COMMITMENT FEE</div>
+<p>Your application is awaiting confirmation of the separate KSh 99 commitment fee.</p>
+</div>
+
+<div class="fee-notice">
+<h3>Commitment Fee Required</h3>
+<div class="fee-amount">KSh 99</div>
+
+<p>
+Please contact HALAL PESA using the official WhatsApp or telephone number below to obtain verified payment instructions and the applicable fee terms.
+</p>
+
+<p style="margin-top:12px">
+Payment must be verified before the application can proceed to the next assessment stage. Payment does not guarantee approval or loan disbursement.
+</p>
+
+<a href="https://wa.me/254182897983?text=Hello%20HALAL%20PESA%2C%20I%20have%20submitted%20a%20loan%20application.%20Please%20provide%20the%20verified%20KSh%2099%20commitment%20fee%20instructions%20and%20fee%20terms." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="margin-top:15px">
+Get Payment Instructions
+</a>
+</div>
+
+<p style="text-align:center;color:#666;font-size:13px;margin-top:15px">
+Keep your application details for future communication. The payment status must be verified by HALAL PESA.
+</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+
+<section id="faq">
+<div class="container">
+<h2 class="section-title">Frequently Asked Questions</h2>
+<p class="section-subtitle">Common questions about HALAL PESA applications.</p>
+
+<div class="faq">
+
+<details>
+<summary>What is the minimum loan amount?</summary>
+<p>The displayed minimum loan amount is KSh 5,000.</p>
+</details>
+
+<details>
+<summary>What is the maximum loan amount?</summary>
+<p>The displayed maximum loan amount is KSh 250,000.</p>
+</details>
+
+<details>
+<summary>How much is the loan interest?</summary>
+<p>The displayed interest is 7% of the original requested loan amount, charged once rather than monthly.</p>
+</details>
+
+<details>
+<summary>Is there a commitment fee?</summary>
+<p>A separate KSh 99 commitment fee is disclosed during the application process. The payment recipient, purpose and refund conditions must be provided before payment.</p>
+</details>
+
+<details>
+<summary>Is the KSh 99 included in the 7% interest?</summary>
+<p>No. The KSh 99 commitment fee is separate from the 7% one-time interest.</p>
+</details>
+
+<details>
+<summary>What is the repayment period?</summary>
+<p>The displayed repayment period is 3 months. The actual repayment schedule must be confirmed in the loan agreement.</p>
+</details>
+
+<details>
+<summary>Does applying guarantee approval?</summary>
+<p>No. Every application is subject to assessment. Payment of a commitment fee does not guarantee loan approval or disbursement.</p>
+</details>
+
+<details>
+<summary>Can I apply through WhatsApp?</summary>
+<p>Yes. You can contact HALAL PESA directly using the WhatsApp button.</p>
+</details>
+
+<details>
+<summary>Should I send my M-PESA PIN or OTP?</summary>
+<p><strong>Never!</strong> HALAL PESA should never ask you to disclose your M-PESA PIN, OTP, password or confidential security information.</p>
+</details>
+
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact-section" id="contact">
+<div class="container">
+
+<h2 class="section-title">Contact HALAL PESA</h2>
+<p class="section-subtitle">We are available for application enquiries and assistance.</p>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+<h3>📞 Phone</h3>
+<p><a href="tel:0182897983">0182897983</a></p>
+</div>
+
+<div class="contact-card">
+<h3>💬 WhatsApp</h3>
+<p><a href="https://wa.me/254182897983" target="_blank" rel="noopener noreferrer">Chat with us</a></p>
+</div>
+
+<div class="contact-card">
+<h3>✉️ Email</h3>
+<p><a href="mailto:halalpesa@gmail.com">halalpesa@gmail.com</a></p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- TERMS -->
+
+<section class="legal" id="terms">
+<div class="container legal-content">
+
+<h2 class="section-title">Terms & Privacy Information</h2>
+
+<h3>1. Loan Applications</h3>
+<p>Submitting an application does not guarantee approval, eligibility, disbursement or any particular loan amount.</p>
+
+<h3>2. Loan Amount</h3>
+<p>The displayed application range is KSh 5,000 to KSh 250,000, subject to assessment and applicable eligibility requirements.</p>
+
+<h3>3. One-time Loan Interest</h3>
+<p>The displayed interest is 7% of the original loan amount, charged once. It is not a monthly interest charge. The final amount payable and repayment schedule must be disclosed in writing before the applicant accepts a loan.</p>
+
+<h3>4. Commitment Fee</h3>
+<p>The website discloses a separate KSh 99 commitment fee. Before collecting this amount, HALAL PESA must clearly communicate its purpose, payment recipient, applicable terms and refund conditions. Payment does not guarantee loan approval or disbursement.</p>
+
+<h3>5. Repayment</h3>
+<p>The website displays a repayment period of 3 months. The final repayment schedule, total cost and any other applicable charges must be provided in the loan agreement.</p>
+
+<h3>6. Privacy</h3>
+<p>Information submitted through the application form should be handled securely and used only for lawful application assessment, processing and communication purposes in accordance with applicable data-protection requirements.</p>
+
+<h3>7. Security</h3>
+<p>Applicants must never provide their M-PESA PIN, OTP, password or other confidential security credentials through this website, email or WhatsApp.</p>
+
+<h3>8. Regulatory Compliance</h3>
+<p>HALAL PESA must obtain and maintain all licences, approvals and registrations required for its lending and fee-collection activities in Kenya and comply with applicable consumer-protection and data-protection laws.</p>
+
+<h3>9. Applicant Declaration</h3>
+<p>By submitting an application, the applicant confirms that the information provided is accurate to the best of their knowledge and consents to the stated application processing.</p>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+<div class="container">
+
+<p><strong>HALAL PESA</strong></p>
+
+<p>Online loan applications for personal, business, school fees and farming needs in Kenya.</p>
+
+<p>
+Phone: <a href="tel:0182897983">0182897983</a> |
+WhatsApp: <a href="https://wa.me/254182897983">0182897983</a>
+</p>
+
+<p>Email: <a href="mailto:halalpesa@gmail.com">halalpesa@gmail.com</a></p>
+
+<p>&copy; 2026 HALAL PESA. All rights reserved.</p>
+
+</div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/254182897983" target="_blank" rel="noopener noreferrer" aria-label="Contact HALAL PESA on WhatsApp">☏</a>
+
+<!-- CALCULATOR AND APPLICATION SCRIPT -->
+
+<script>
+
+const loanAmount = document.getElementById("loanAmount");
+const loanAmountNumber = document.getElementById("loanAmountNumber");
+const amountDisplay = document.getElementById("amountDisplay");
+
+const requestedAmount = document.getElementById("requestedAmount");
+const interestAmount = document.getElementById("interestAmount");
+const totalRepayment = document.getElementById("totalRepayment");
+
+const loanAmountForm = document.getElementById("loanAmountForm");
+const interestFeeForm = document.getElementById("interestFeeForm");
+const totalRepaymentForm = document.getElementById("totalRepaymentForm");
+
+const formatMoney = n =>
+"KSh " + Math.round(n).toLocaleString("en-KE");
+
+function updateCalculator(value) {
+
+const amount = Math.min(250000, Math.max(5000, Number(value) || 5000));
+
+const interest = amount * 0.07;
+const total = amount + interest;
+
+loanAmount.value = amount;
+loanAmountNumber.value = amount;
+
+amountDisplay.textContent = formatMoney(amount);
+requestedAmount.textContent = formatMoney(amount);
+interestAmount.textContent = formatMoney(interest);
+totalRepayment.textContent = formatMoney(total);
+
+loanAmountForm.value = amount;
+interestFeeForm.value = formatMoney(interest);
+totalRepaymentForm.value = formatMoney(total);
+
+}
+
+loanAmount.addEventListener("input", e => {
+updateCalculator(e.target.value);
+});
+
+loanAmountNumber.addEventListener("input", e => {
+if(e.target.value !== "") {
+updateCalculator(e.target.value);
+}
+});
+
+loanAmountForm.addEventListener("input", e => {
+if(e.target.value !== "") {
+updateCalculator(e.target.value);
+}
+});
+
+updateCalculator(5000);
+
+
+// NETLIFY APPLICATION SUBMISSION
+
+const applicationForm = document.getElementById("loanApplicationForm");
+const submitButton = document.getElementById("submitButton");
+
+applicationForm.addEventListener("submit", async function(e) {
+
+e.preventDefault();
+
+if(!applicationForm.reportValidity()) return;
+
+const amount = Number(loanAmountForm.value);
+
+if(amount < 5000 || amount > 250000) {
+alert("Please enter a loan amount between KSh 5,000 and KSh 250,000.");
+return;
+}
+
+submitButton.disabled = true;
+submitButton.textContent = "Submitting Application...";
+
+try {
+
+const formData = new FormData(applicationForm);
+
+const response = await fetch("/", {
+method: "POST",
+headers: {
+"Content-Type": "application/x-www-form-urlencoded"
+},
+body: new URLSearchParams(formData).toString()
+});
+
+if(!response.ok) {
+throw new Error("Application submission failed.");
+}
+
+document.getElementById("applicationFormArea").style.display = "none";
+document.getElementById("successArea").style.display = "block";
+
+document.getElementById("successArea").scrollIntoView({
+behavior: "smooth",
+block: "start"
+});
+
+} catch(error) {
+
+alert("Your application could not be submitted. Please check your internet connection and try again.");
+
+submitButton.disabled = false;
+submitButton.textContent = "Submit Loan Application";
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
